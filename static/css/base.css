@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/egg-grass.jpeg') no-repeat center center fixed;
    
-    background-size: 35%;
+    background-size: 75%;
     height: calc(100vh - 164px);
     width: fit-content;
     color: #555;
