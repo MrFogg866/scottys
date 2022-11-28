@@ -3,9 +3,11 @@ html {
 }
 
 body {
-    background: url('/media/logo-test.jpg') no-repeat center center fixed;
-    background-size: cover;
+    background: url('/media/logo-test.jpeg') no-repeat center center fixed;
+   
+    background-size: 35%;
     height: calc(100vh - 164px);
+    width: fit-content;
     color: #555;
     font-family: 'Lato';
 }
