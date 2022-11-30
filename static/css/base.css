@@ -54,8 +54,13 @@ body {
     color: #000 !important;
 }
 
+
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
