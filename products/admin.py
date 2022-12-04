@@ -14,11 +14,11 @@ class ProductAdmin(admin.ModelAdmin):
 
     )
 
-    ordering =('sku',)
+    ordering = ('sku',)
 
 class CategoryAdmin(admin.ModelAdmin):
     list_display = (
-        'freindly_name',
+        'friendly_name',
         'name',
     )
 
