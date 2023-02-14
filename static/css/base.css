@@ -319,6 +319,33 @@ input[name='q']::placeholder {
         -o-transform: translateX(-90%);
     }
 }
+/* Home Header */
+.home-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-img.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
 
+.banner-text {
+    font-size: 36px;
+    color: #fff;
+    padding-left: 4%;
+    padding-top: 220px;
+    padding-bottom: 220px;
+}
+
+.banner-text .btn-primary {
+    background-image: linear-gradient(to right, #3636f3, #be43f1);
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 12px;
+    padding: 15px 30px;
+    margin-top: 10px;
+}
 
 
