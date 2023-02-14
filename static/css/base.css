@@ -276,17 +276,49 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 35px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 5px;
     }
 
     body {
         height: calc(100vh - 116px);
     }
 }
+
+.navbar-brand img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10PX;
+}
+
+@media (max-width: 991px) {
+    .navbar-brand img {
+        width: 65px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 90%;
+        transform: translateX(-90%);
+        top: 0;
+        -webkit-transform: translateX(-90%);
+        -moz-transform: translateX(-90%);
+        -ms-transform: translateX(-90%);
+        -o-transform: translateX(-90%);
+    }
+}
+
+
+
