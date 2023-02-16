@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light container-xxl">
-    <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/img/logo-test.jpeg"></a>
+    <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/img/logo1.jpeg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -39,6 +39,9 @@
                     <a href="{% url 'book'%}" class="dropdown-item">Book Us</a>
                 </div>
             </li>
+            
+        </ul>
+        <ul class="navbar-nav ms-auto navbar-row">
             <li class="nav-item dropdown">
                 <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link"
                     data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
@@ -48,30 +51,7 @@
                     <a href="{% url 'social_media'%}" class="dropdown-item">Social Media </a>
                 </div>
             </li>
-        </ul>
-        <ul class="navbar-nav ms-auto navbar-row">
-            <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                    href="{% url 'home' %}">
-                    <div class="text-center">
-                        <div><i class="fas fa-home fa-lg"></i></div>
-                        <p class="my-0">
-                            home
-                        </p>
-                    </div>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                    href="{% url 'event_book' %}">
-                    <div class="text-center">
-                        <div><i class="fas fa-clock fa-lg"></i></div>
-                        <p class="my-0">
-                            book for events
-                        </p>
-                    </div>
-                </a>
-            </li>
+            
             <li class="list-inline-item dropdown">
                 <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
                     aria-expanded="false" aria-haspopup="true">
