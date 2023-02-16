@@ -27,5 +27,6 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('', include('about.urls')),
     path('', include('book.urls')),
+    path('', include('social_media.urls')),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
