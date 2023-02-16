@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    background: url('/media/egg-grass.jpeg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -19,12 +18,14 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
+a {
+    color: #212529;
+    text-decoration: none;
 }
 
-.main-logo-link {
-    width: fit-content;
+a:hover {
+    color: #15171a;
+    text-decoration: none;
 }
 
 .shop-now-button {
@@ -40,7 +41,8 @@ body {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
+    /* use important to override link colors for <a> elements */
     border: 1px solid black;
 }
 
@@ -74,16 +76,16 @@ body {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
 }
 
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
 }
@@ -96,6 +98,38 @@ a.category-badge > span.badge:hover {
     right: 10px;
 }
 
+/*--------------------------------------------------------------
+# Page title
+--------------------------------------------------------------*/
+.page-title {
+    font-size: 70px;
+    color: var(--color-black);
+}
+
+/*--------------------------------------------------------------
+# More information
+--------------------------------------------------------------*/
+.more {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.more:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+}
+
 .btt-link,
 .update-link,
 .remove-item {
@@ -106,8 +140,9 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
-
+/*--------------------------------------------------------------
+# bootstrap toasts
+--------------------------------------------------------------*/
 .message-container {
     position: fixed;
     top: 72px;
@@ -125,10 +160,10 @@ input[name='q']::placeholder {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -178,16 +213,18 @@ input[name='q']::placeholder {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -205,8 +242,8 @@ input[name='q']::placeholder {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #fff;
     text-align: center;
@@ -223,18 +260,19 @@ input[name='q']::placeholder {
     border-radius: 0;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
     background-color: #222;
     border-color: #222;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+    color: #17a2b8;
+    /* text-info */
 }
 
 /* Product Form */
@@ -276,14 +314,14 @@ input[name='q']::placeholder {
     }
 
     .header-container {
-        padding-top: 35px;
+        padding-top: 168px;
     }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 5px;
+        padding-top: 130px;
     }
 
     body {
@@ -292,7 +330,7 @@ input[name='q']::placeholder {
 }
 
 .navbar-brand img {
-    width: 100px;
+    max-height: 55px;
     border-radius: 50%;
 }
 
@@ -305,7 +343,7 @@ input[name='q']::placeholder {
 
 @media (max-width: 991px) {
     .navbar-brand img {
-        width: 65px;
+        max-height: 40px;
     }
 
     .navbar-brand {
@@ -319,9 +357,12 @@ input[name='q']::placeholder {
         -o-transform: translateX(-90%);
     }
 }
-/* Home Header */
+
+/*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
 .home-header {
-    background-image: url(../img/hero1.jpeg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero1.jpeg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -329,6 +370,14 @@ input[name='q']::placeholder {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+}
+
+.navbar-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
 }
 
 .banner-text {
@@ -348,7 +397,9 @@ input[name='q']::placeholder {
     margin-top: 10px;
 }
 
-/* NewsLetter */
+/*--------------------------------------------------------------
+# NewsLetter Section
+--------------------------------------------------------------*/
 .card {
     background-color: #222222;
     border-radius: 10px;
@@ -379,4 +430,243 @@ input[name='q']::placeholder {
 
 .btn:hover {
     background-color: #22099e;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.post-entry-2 {
+    margin-bottom: 30px;
+}
+
+.post-entry-2 .post-meta {
+    font-size: 11px;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--font-secondary);
+    color: rgba(var(--color-black-rgb), 0.4);
+    margin-bottom: 10px;
+}
+
+.post-entry-2 .author {
+    color: rgba(var(--color-black-rgb), 0.7);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.post-entry-2 .thumbnail {
+    flex: 0 0 65%;
+}
+
+@media (max-width: 960px) {
+    .post-entry-2 .thumbnail {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.post-entry-2.half .thumbnail {
+    flex: 0 0 50%;
+}
+
+@media (max-width: 768px) {
+    .post-entry-2.half .thumbnail {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.post-entry-2.small-img .thumbnail {
+    flex: 0 0 30%;
+}
+
+@media (max-width: 768px) {
+    .post-entry-2.small-img .thumbnail {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.book-a-table .reservation-img {
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.book-a-table .reservation-form-bg {
+    background: rgba(55, 55, 63, 0.04);
+}
+
+.book-a-table .email-form {
+    padding: 40px;
+}
+
+@media (max-width: 575px) {
+    .book-a-table .email-form {
+        padding: 20px;
+    }
+}
+
+.book-a-table .email-form h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.book-a-table .email-form h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+}
+
+.book-a-table .email-form p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.book-a-table .email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #2D0BD6;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.book-a-table .email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.book-a-table .email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+.book-a-table .email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #059652;
+    border-top-color: #fff;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.book-a-table .email-form input,
+.book-a-table .email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.book-a-table .email-form input:focus,
+.book-a-table .email-form textarea:focus {
+    border-color: #2D0BD6;
+}
+
+.book-a-table .email-form input {
+    padding: 12px 15px;
+}
+
+.book-a-table .email-form textarea {
+    padding: 12px 15px;
+}
+
+.book-a-table .email-form button[type=submit] {
+    background: #2D0BD6;
+    border: 0;
+    padding: 14px 60px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.book-a-table .email-form button[type=submit]:hover {
+    background: #22099e;
+}
+
+/*--------------------------------------------------------------
+# Social Media Section
+--------------------------------------------------------------*/
+.facebook {
+    color: #4267B2;
+}
+
+.facebook:hover {
+    color: #2C4499;
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.twitter:hover {
+    color: #4267B2;
+}
+
+.instagram {
+    color: #FFA500;
+}
+
+.instagram:hover {
+    color: #833AB4;
+}
+
+.youtube {
+    color: #FF0000;
+}
+
+.youtube:hover {
+    color: #B20000;
+}
+
+/*--------------------------------------------------------------
+# Book Of Events Section
+--------------------------------------------------------------*/
+.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.text-muted {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3;
+    }
 }
