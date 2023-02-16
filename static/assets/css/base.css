@@ -1,0 +1,672 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+a {
+    color: #212529;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #15171a;
+    text-decoration: none;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+a.category-badge>span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+/*--------------------------------------------------------------
+# Page title
+--------------------------------------------------------------*/
+.page-title {
+    font-size: 70px;
+    color: var(--color-black);
+}
+
+/*--------------------------------------------------------------
+# More information
+--------------------------------------------------------------*/
+.more {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+
+.more:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000000;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/*--------------------------------------------------------------
+# bootstrap toasts
+--------------------------------------------------------------*/
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: #6c757d;
+    /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+    color: #17a2b8;
+    /* text-info */
+}
+
+/* Product Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 168px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 130px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+.navbar-brand img {
+    max-height: 55px;
+    border-radius: 50%;
+}
+
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10PX;
+}
+
+@media (max-width: 991px) {
+    .navbar-brand img {
+        max-height: 40px;
+    }
+
+    .navbar-brand {
+        position: absolute;
+        left: 90%;
+        transform: translateX(-90%);
+        top: 0;
+        -webkit-transform: translateX(-90%);
+        -moz-transform: translateX(-90%);
+        -ms-transform: translateX(-90%);
+        -o-transform: translateX(-90%);
+    }
+}
+
+/*--------------------------------------------------------------
+# Home Section
+--------------------------------------------------------------*/
+.home-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero1.jpeg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.navbar-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.banner-text {
+    font-size: 36px;
+    color: #fff;
+    padding-left: 4%;
+    padding-top: 220px;
+    padding-bottom: 220px;
+}
+
+.banner-text .btn-primary {
+    background-image: linear-gradient(to right, #3636f3, #be43f1);
+    border: none !important;
+    box-shadow: none !important;
+    font-size: 12px;
+    padding: 15px 30px;
+    margin-top: 10px;
+}
+
+/*--------------------------------------------------------------
+# NewsLetter Section
+--------------------------------------------------------------*/
+.card {
+    background-color: #222222;
+    border-radius: 10px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.fa {
+    color: #d9d5d5;
+}
+
+#inp1 {
+    background-color: #222222;
+    border: 1px solid #636161;
+    font-size: 0.75rem;
+    color: #fff;
+}
+
+#inp1:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn {
+    background-color: #2D0BD6;
+    font-size: 0.78rem;
+    border: 0px;
+}
+
+.btn:hover {
+    background-color: #22099e;
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.post-entry-2 {
+    margin-bottom: 30px;
+}
+
+.post-entry-2 .post-meta {
+    font-size: 11px;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--font-secondary);
+    color: rgba(var(--color-black-rgb), 0.4);
+    margin-bottom: 10px;
+}
+
+.post-entry-2 .author {
+    color: rgba(var(--color-black-rgb), 0.7);
+    font-weight: 500;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.post-entry-2 .thumbnail {
+    flex: 0 0 65%;
+}
+
+@media (max-width: 960px) {
+    .post-entry-2 .thumbnail {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.post-entry-2.half .thumbnail {
+    flex: 0 0 50%;
+}
+
+@media (max-width: 768px) {
+    .post-entry-2.half .thumbnail {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.post-entry-2.small-img .thumbnail {
+    flex: 0 0 30%;
+}
+
+@media (max-width: 768px) {
+    .post-entry-2.small-img .thumbnail {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.book-a-table .reservation-img {
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.book-a-table .reservation-form-bg {
+    background: rgba(55, 55, 63, 0.04);
+}
+
+.book-a-table .email-form {
+    padding: 40px;
+}
+
+@media (max-width: 575px) {
+    .book-a-table .email-form {
+        padding: 20px;
+    }
+}
+
+.book-a-table .email-form h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.book-a-table .email-form h4 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+}
+
+.book-a-table .email-form p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.book-a-table .email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #2D0BD6;
+    text-align: left;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.book-a-table .email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #059652;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+    font-weight: 600;
+}
+
+.book-a-table .email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 24px;
+}
+
+.book-a-table .email-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #059652;
+    border-top-color: #fff;
+    -webkit-animation: animate-loading 1s linear infinite;
+    animation: animate-loading 1s linear infinite;
+}
+
+.book-a-table .email-form input,
+.book-a-table .email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.book-a-table .email-form input:focus,
+.book-a-table .email-form textarea:focus {
+    border-color: #2D0BD6;
+}
+
+.book-a-table .email-form input {
+    padding: 12px 15px;
+}
+
+.book-a-table .email-form textarea {
+    padding: 12px 15px;
+}
+
+.book-a-table .email-form button[type=submit] {
+    background: #2D0BD6;
+    border: 0;
+    padding: 14px 60px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.book-a-table .email-form button[type=submit]:hover {
+    background: #22099e;
+}
+
+/*--------------------------------------------------------------
+# Social Media Section
+--------------------------------------------------------------*/
+.facebook {
+    color: #4267B2;
+}
+
+.facebook:hover {
+    color: #2C4499;
+}
+
+.twitter {
+    color: #1DA1F2;
+}
+
+.twitter:hover {
+    color: #4267B2;
+}
+
+.instagram {
+    color: #FFA500;
+}
+
+.instagram:hover {
+    color: #833AB4;
+}
+
+.youtube {
+    color: #FF0000;
+}
+
+.youtube:hover {
+    color: #B20000;
+}
+
+/*--------------------------------------------------------------
+# Book Of Events Section
+--------------------------------------------------------------*/
+.card {
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card-header h4 {
+    margin: 0;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.text-muted {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
