@@ -178,16 +178,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-#STATIC_URL: specifies what to append when you call `{% static %}` as template tag. 
 STATIC_URL = '/static/'
+if DEBUG:
+    STATICFILES_DIRS = [BASE_DIR / "static"]
+else:
+    STATIC_ROOT = BASE_DIR / "static"   
 
-#STATIC_ROOT: specifies where exactly you yourself will put your static files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticroot')
+cloudinary.config(
 
-#STATICFILES_DIRS: it tells Django where to look for static files while
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+    cloud_name = "dp1msqpei",
+    api_key = "238445858734859",
+    api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
+)
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
