@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -14,39 +15,23 @@
 {% block content %}
 <div class="container-fluid" style="padding-bottom: 20px;">
    <div class="home-header">
-      <div class="banner-text">
+         <div class="banner-text">
          <p>"Simply EggCellent"</p>
          <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
       </div>
    </div>
-   <div class="mt-4">
-      <div class="row justify-content-center">
-         <div class="col-12 col-md-10 col-sm-12 col-xs-12">
-            <div class="card p-3 p-md-4 text-white w-100">
-
-               <span class="text-center"><i class="fas fa-envelope fa-2x" aria-hidden="true"></i></span>
-
-               <h6 class="my-3 text-center fs-3"> Subscribe to the newsletter </h6>
-
-               <form action="">
-                  <div class="row d-flex my-2 pr-2 pr-md-5 div1">
-                     <div class="col-12">
-                        <input type="text" class="form-control py-3" id="inp1" placeholder="Enter Name" required>
-                     </div>
-                     <div class="col-12 mt-3">
-                        <input type="email" class="form-control py-3" id="inp1" placeholder="Enter email address"
-                           required>
-                     </div>
-
-                  </div>
-                  <div class="d-grid mt-3">
-                     <button class="btn text-white px-4 py-2 fs-5">Subscribe</button>
-                  </div>
-               </form>
-
-            </div>
-         </div>
-      </div>
-   </div>
+   <div class="col-lg-6 col-md-6" style="margin: 100px auto; display: block;">
+      <form enctype="multipart/form-data" method="POST" action="" style="text-align: center;">
+          {% csrf_token %}
+          <div class="form-group">
+              <label>Subscribe to our Newsletter.</label>
+              <input type="email" class="form-control" id="userEmail" placeholder="Enter email" required>
+              <small style="font-weight: 600;color: red;" class="error"></small>
+              <input type="text" class="form-control mt-2" id="userName" placeholder="Enter name" required>
+              <small style="font-weight: 600;color: green;" class="success"></small>
+          </div>
+          <input type="submit" value="Subscribe" id="submit" class="btn">     
+      </form>
+  </div>
 </div>
 {% endblock %}   

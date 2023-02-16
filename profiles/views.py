@@ -11,6 +11,9 @@ def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    for user in User.objects.all():
+        UserProfile.objects.get_or_create(user=user)
+
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -30,7 +33,6 @@ def profile(request):
     }
 
     return render(request, template, context)
-
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

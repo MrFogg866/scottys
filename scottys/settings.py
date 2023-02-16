@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import dj_database_url
+from decouple import config
 
 if os.path.exists("env.py"):
   import env 
@@ -53,6 +54,8 @@ INSTALLED_APPS = [
     'checkout',
     'events',
     'profiles',
+    'about',
+    
 
     # other
     'crispy_forms',
@@ -196,3 +199,12 @@ DEFAULT_FROM_EMAIL = 'scotties@gmail.com'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#Sending emails
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = config("EADDRESS")
+EMAIL_HOST_PASSWORD = config("EPASSWORD")

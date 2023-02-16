@@ -46,7 +46,7 @@
   <body>
     <header class="container py-2">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/img/logo-test.jpeg"></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="../static/img/logo1.jpeg"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -75,7 +75,7 @@
                             About Us
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                            <a href="{% url 'products'%}?category=who_are_we" class="dropdown-item">Who are we?</a>
+                            <a href="{% url 'about'%}" class="dropdown-item">Who are we?</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -207,6 +207,7 @@
     {% endblock %}
    
    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+   <script src="{% static 'static/js/app.js' %}"></script>
 
     
   </body>

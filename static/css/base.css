@@ -321,7 +321,7 @@ input[name='q']::placeholder {
 }
 /* Home Header */
 .home-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero-img.jpg);
+    background-image: url(../img/hero1.jpeg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
