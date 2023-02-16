@@ -13,6 +13,10 @@ import os
 import dj_database_url
 from decouple import config
 
+import cloudinary 
+import cloudinary.uploader
+import cloudinary.api
+
 if os.path.exists("env.py"):
   import env 
 
@@ -23,7 +27,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', 'development')
@@ -56,8 +59,7 @@ INSTALLED_APPS = [
     'about',
     'book',
     'social_media',
-
-
+    
     # other
     'crispy_forms',
 ]
@@ -180,7 +182,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 if DEBUG:
-    STATICFILES_DIRS = [BASE_DIR / "static"]
+    STATICFILES_DIRS = [ BASE_DIR + "/static",  ]
 else:
     STATIC_ROOT = BASE_DIR / "static"   
 
@@ -190,7 +192,6 @@ cloudinary.config(
     api_key = "238445858734859",
     api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
 )
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -212,11 +213,3 @@ DEFAULT_FROM_EMAIL = 'scotties@gmail.com'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-#Sending emails
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = config("EADDRESS")
-EMAIL_HOST_PASSWORD = config("EPASSWORD")
