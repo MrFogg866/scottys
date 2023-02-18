@@ -30,6 +30,7 @@ urlpatterns = [
     path('', include('social_media.urls')),
     path('book-form/', include('bookform.urls')),
     path('signup/', include('signup.urls')),
+    path('login/', include('login.urls')),
     
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'social_media',
     'bookform',
     'signup',
+    'login',
     
     # other
     'crispy_forms',
