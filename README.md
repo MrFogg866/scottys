@@ -266,7 +266,7 @@ The database model has been designed using [drawsql](https://drawsql.app/). The 
 
 #### Color Scheme
 
-![Color scheme image](static/img/colour-scheme.jpeg)
+![Color scheme image](../../../static/img/colour-scheme.jpeg)
 
 The colors used in the website are a series of blue tones to represent the stunning ocean colors and this way captivate our shoppers.
 
