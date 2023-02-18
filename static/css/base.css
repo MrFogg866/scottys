@@ -362,7 +362,7 @@ input[name='q']::placeholder {
 # Home Section
 --------------------------------------------------------------*/
 .home-header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/hero1.jpeg);
+    background-image:  url(../img/hero1.jpeg);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -386,6 +386,13 @@ input[name='q']::placeholder {
     padding-left: 4%;
     padding-top: 220px;
     padding-bottom: 220px;
+}
+
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 30px;
+        text-align: center;
+    }
 }
 
 .banner-text .btn-primary {

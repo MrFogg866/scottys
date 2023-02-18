@@ -26,11 +26,12 @@ urlpatterns = [
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
     path('', include('about.urls')),
-    path('', include('book.urls')),
+    
     path('', include('social_media.urls')),
     path('book-form/', include('bookform.urls')),
     path('signup/', include('signup.urls')),
     path('login/', include('login.urls')),
+    path('newsletter/', include('newsletter.urls')),
     
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
