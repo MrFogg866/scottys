@@ -35,6 +35,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('newsletter/', include('newsletter.urls')),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
+    path('logout/', include('logout.urls')),
 
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
