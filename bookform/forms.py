@@ -49,7 +49,8 @@ class BookingForm(forms.Form):
         subject = f'Booking Request from {name}'
         body = f'Name: {name}\nEmail: {email}\nPhone: {phone}\nDate: {date}\nTime: {time}\nNumber of People: {people}\nMessage: {message}'
         from_email = 'your-email@example.com'
-        to_email = ['scotties234@gmail.com']
+        to_email = ['scotties243@gmail.com']
+        
 
         # Send the email
         send_mail(subject, body, from_email, to_email, fail_silently=False)
