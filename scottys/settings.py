@@ -199,6 +199,8 @@ cloudinary.config(
     api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
 )
 
+result = cloudinary.uploader.upload("scotties")
+
 # Stripe 
 
 FREE_DELIVERY_THRESHOLD = 50
