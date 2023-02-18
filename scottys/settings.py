@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'development')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True 
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'scotties.herokuapp.com', '*']
 
@@ -198,10 +198,6 @@ cloudinary.config(
     api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
 )
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
 # Stripe 
 
 FREE_DELIVERY_THRESHOLD = 50
@@ -227,3 +223,4 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
