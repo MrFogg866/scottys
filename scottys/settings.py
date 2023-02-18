@@ -15,6 +15,7 @@ from decouple import config
 import cloudinary 
 import cloudinary.uploader
 import cloudinary.api
+import django_heroku
 
 if os.path.exists("env.py"):
   import env 
@@ -224,3 +225,4 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+django_heroku.settings(locals(), staticfiles=False)
