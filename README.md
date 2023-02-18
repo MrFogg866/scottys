@@ -266,7 +266,7 @@ The database model has been designed using [drawsql](https://drawsql.app/). The 
 
 #### Color Scheme
 
-![Color scheme image](assets/readme/color-scheme.png)
+![Color scheme image](static/img/colour-scheme.jpeg)
 
 The colors used in the website are a series of blue tones to represent the stunning ocean colors and this way captivate our shoppers.
 
@@ -359,14 +359,14 @@ See the live Facebook Business page [here](https://www.facebook.com/).
 
 
 #### Search Bar
-![Scotties search bar image](assets/readme/scotties-search-bar.png)
+![Scotties search bar image](static/img/searchbar.jpeg)
 
 * The search bar allows the user to search the website for products using specific keywords.
 
 * The search bar is hidden at first for better visuals and can be toggled using the search icon link in case the shopper needs.
 
 #### Footer
-![Scotties footer image](assets/readme/noplast-footer.png)
+![Scotties footer image](static/img//readme/noplast-footer.png)
 
 * The footer contains business information as well as links to our Facebook page and privacy policy.
 
