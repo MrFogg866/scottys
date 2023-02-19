@@ -603,6 +603,8 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 
 ## Testing
 
+| NU HTML| ![ HTML Validator image](static/img/testhtml1.jpeg) | ![HTML Validator image ](static/img/testhtml2.jpeg) |
+
 ## Deployment
  
 The project was developed using[GitPod](https://gitpod.io/) workspace. The code was commited to [Git](https://git-scm.com/) and pushed to [GitHub](https://github.com/") using the terminal. The web application is deployed on Heroku as Github Pages is not able to host a Python project.
