@@ -111,8 +111,6 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
 
 * As a shopper, I want to easily provide my shipping and payment information during the checkout.
 
-* As a shopper, I want to feel my personal and payment data is being handled securely.
-
 * As a shopper, I want to receive an order confirmation once I have finished my purchase.
 
 * As a shopper, I want to receive an order confirmation email for my records.
@@ -223,8 +221,9 @@ According to the strategy table, not all features can be implemented in the firs
 
 ### User Stories
 
-GitHub projects was used as my project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress.
+GitHub projects was used as my project management tool to track user stories. Using this helped to focus on specific tasks and track the project progress.
 
+|USER| ![User stories open cases](static/img/open.jpeg) | ![User stories closed cases](static/img/closed.jpeg) |
 
 ### Structure
 
@@ -309,13 +308,17 @@ Theres is hundreds of food trucks serving great food, but  none in our area serv
 
 **Marketing Strategy**
 
-Due to our small marketing budget, we have decided to start a Facebook Business page and interact with our customers. For our buying customers we have made it easy to sign up for our newsletter, in order to make them even more loyal and facilitate for them to share recipes and new products with their friends and family. Now, in this stage of starting a new company we rely a lot on “word of mouth” to attract more visitors for our foodtruck & homepage and more buying customers.
+Due to our small marketing budget, we have decided to start a Facebook Business page and interact with our customers. For our buying customers we have made it easy to sign up for our newsletter, in order to make them even more loyal and facilitate for them to share recipes and new products with their friends and family. Now, in this stage of starting a new company we rely a lot on “word of mouth” to attract more visitors for our foodtruck & homepage and more buying customers. 
+
+
 
 **Facebook Business page**
 
-See the live Facebook Business page [here](https://www.facebook.com/).
-![Scotties Facebook Business page image](assets/readme/facebook-business-page.png)
+See the live Facebook Business page [here](https://www.facebook.com/Scotties-Hot-Scotch-Eggs-108935481740254/).
+![Scotties Facebook Business](static/img/fb.jpeg)
 
+See the Instragram page here [here](https://instagram.com/scotties_hotscotch_eggs?igshid=YmMyMTA2M2Y=).
+![Scotties Instagram](static/img/ig.jpeg)
 ## Features
 
 
@@ -327,7 +330,7 @@ See the live Facebook Business page [here](https://www.facebook.com/).
 
 
 #### Header
-![Scotties header image](assets/readme/scotties-header.png)
+![Scotties header](static/img/navbar.jpeg)
 
 * The header contains the main logo, navigation links and search product functionality.
 
@@ -344,14 +347,6 @@ See the live Facebook Business page [here](https://www.facebook.com/).
 * The search bar allows the user to search the website for products using specific keywords.
 
 * The search bar is hidden at first for better visuals and can be toggled using the search icon link in case the shopper needs.
-
-#### Footer
-![Scotties footer image](static/img//readme/noplast-footer.png)
-
-* The footer contains business information as well as links to our Facebook page and privacy policy.
-
-* A newsletter registration form has been located at the footer allowing the shopper to subscribe across the whole website.
-
 
 ### Home Page
 
@@ -574,7 +569,8 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 * [Heroku](https://www.heroku.com)   
     * Heroku was used to deploy the website.
 
-
+* [photoshop](https://www.adobe.com)   
+    * Photoshop was used to design the homepage image
 
 * [Coolors](https://coolors.co)  
     * Coolors was used to create a color scheme for the website.
@@ -604,6 +600,12 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 ## Testing
 
 | NU HTML| ![ HTML Validator image](static/img/testhtml1.jpeg) | ![HTML Validator image ](static/img/testhtml2.jpeg) |
+
+There were a few errors when i ran i ran the deployed project through the Nu Html Checker, and as you can see i removed these.
+
+| W3 CSS| ![ W3 CSS Validator image](static/img/csstest.jpeg) 
+
+No Errors here 
 
 ## Deployment
  
@@ -696,14 +698,6 @@ Page | Desktop | Mobile |
 [Back to top ⇧](#scotties)
 
 
-## Credits
-
-
-### Content
-
-* 
-  
-
 ### Media
 
 * All images are owned by Scotties Hot Scotch Eggs 
@@ -714,6 +708,8 @@ Page | Desktop | Mobile |
 * The code in Code Institute's video on the Boutique Ado project was used as the main reference point to set up an e-commerce / online store project using HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe
 
 ## Known Bugs
+
+*  the prices are currently displayed in $USD and will need to be changed into GBP
 
 [Back to top ⇧](#scotties)
 
