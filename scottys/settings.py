@@ -84,7 +84,7 @@ ROOT_URLCONF = 'scottys.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+X_FRAME_OPTIONS = 'DENY'
 
 TEMPLATES = [
     {
