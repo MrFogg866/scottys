@@ -38,16 +38,12 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
    3. [Products Page](#products-page)
    4. [Product Details Page](#product-details-page)
    5. [Products Admin](#products-admin)
-   5. [Shopping Bag Page](#shopping-bag-page)
-   6. [Checkout Page](#checkout-page)
-   7. [Checkout Success Page](#checkout-success-page)
-   8. [Profile Page](#profile-page)
-   9. [Favorites Page](#favorites-page)
-   10. [Reviews Page](#reviews-page)
-   11. [Reviews Admin](#reviews-admin)
-   
-   13. [Accounts Pages](#accounts-pages)
-   14. [404 Error Page](#404-error-page)
+   6. [Shopping Bag Page](#shopping-bag-page)
+   7. [Checkout Page](#checkout-page)
+   8. [Checkout Success Page](#checkout-success-page)
+   9. [Profile Page](#profile-page)
+   10. [Accounts Pages](#accounts-pages)
+   11. [404 Error Page](#404-error-page)
 4. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -61,8 +57,6 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
 6. [Deployment](#deployment)
     1. [How To Use This Project](#how-to-use-this-project)  
     2. [Deployment to Heroku](#deployment-to-heroku)   
-    3. [AWS Bucket Creation](#aws-bucket-creation)  
-    4. [Connect Django to AWS Bucket](#connect-django-to-aws-bucket)
 7. [Finished Product](#finished-product)
 8. [Credits](#credits)
 9. [Known Bugs](#known-bugs)
@@ -149,12 +143,7 @@ Account registration | 5 | 5
 User profile | 5 | 5
 Save shipment information | 5 | 5
 Product quick view | 3 | 2
-Sort products by different criteria | 5 | 5
-Search products by name or description | 5 | 5
 Product details view | 5 | 5
-Display similar products at the a product details view | 3 | 2
-Rate products | 4 | 3
-Write product reviews | 4 | 3
 Display current purchase total | 5 | 5
 View current shopping cart | 5 | 5
 Edit quantities inside the shopping bag | 4 | 4
@@ -162,12 +151,8 @@ Shopping cart quick view | 3 | 3
 Card payment | 5 | 5
 Newsletter subscription | 5 | 5
 
-**Total** | **88** | **83**
+**Total** | **60** | **59**
 
-
-### Scope
-
-According to the strategy table, not all features can be implemented in the first release of the project. For this reason, the project will be divided in multiple phases. The first phase will include the features that have been identified in order to build the minimum viable product.
 
 
 **First Phase**
@@ -242,11 +227,10 @@ The website has been organized in a Hierarchical Tree Structure to ensure the si
 ![404 error](static/img/404.jpeg)
 
 
-#### Database Model
+#### Database 
 
-The database model has been designed using [drawsql](https://drawsql.app/). The type of database being used for the is relational database being managed using SQLite3 during development and managed using [PostgreSQL](https://www.postgresql.org/) within the deployed app help in [Heroku](https://www.heroku.com/) .
+The type of database being used for the is relational database being managed using SQLite3 during development and managed using [PostgreSQL](https://www.postgresql.org/) within the deployed app help in [Heroku](https://www.heroku.com/) .
 
-![Scotties Database Model](assets/readme/db-model.png)
 
 #### Color Scheme
 
@@ -260,7 +244,7 @@ For secondary buttons,  we use a Alabaster (#F0EDE2). As well as to highlight so
 
 Slate Blue (#695ec8) is  used for the colour of the shredded paper egg basket on the home page 
 
-We used  white   (#fff) for thein mbackground and in text located within the dark backgrounds.
+We used  white   (#fff) for the background and in text located within the dark backgrounds.
 
 
 #### Typography
@@ -342,6 +326,7 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 
 
 #### Search Bar
+
 ![Scotties search bar image](static/img/searchbar.jpeg)
 
 * The search bar allows the user to search the website for products using specific keywords.
@@ -352,24 +337,22 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 
 
 #### Categories Section
-![Scotties categories section image](assets/readme/scotties-categories.png)
 
 * Display to the shopper the product categories available, providing a link to each category.
 
-
 #### About Section
-![Scotties about section image](assets/readme/scotties-about.png)
 
 * Provide relevant information to the shopper looking to learn more about our business.
 
 #### Events Section
-![Scotties guide section image](assets/readme/scotties-guide.png)
 
-* Provides users information on how to book us for events.
-* Provides users information on what events we will be at.
+* Provides users a booking form and ability to request us for events.
+
+![Scotties events thanks](static/img/bf-thankyou.jpeg)
+
+* Provides users a confirmation message if details entered correctly
 
 ### Products Page
-![Scotties products page image](assets/readme/scotties-products.png)
 
 * Display all the products currently available or filtered on a specific category.
 
@@ -388,7 +371,6 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 * Links to edit and remove are available for each product.
 
 ### Product Details Page
-![Scotties  product details page image](assets/readme/scotties-product-details.png)
 
 * The products navigation bar is present in case the shopper wants to go back to the products.
 
@@ -415,20 +397,17 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 
 ### Products Admin
 
+![Scotties admin](static/img/admin.jpeg)
+
 #### Add Product
-![Scotties add product image](assets/readme/scotties-product-add.png)
 
 * Provide a form for the site admin to be able to add new products to the store.
 
 #### Edit Product
-![Scotties edit product image](assets/readme/scotties-product-edit.png)
 
 * Provide a prefilled form for the site admin to be able to update products in the store.
 
-
 ### Shopping Bag Page
-![scotties shopping bag page image](assets/readme/scotties-shopping-bag.png)
-
 
 * Display all products currently on the shopping bag and their information.
 
@@ -441,7 +420,6 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 * A button to checkout is provided for the shopper to finish the purchase.
 
 ### Checkout Page
-![scotties checkout page image](assets/readme/scotties-checkout.png)
 
 * Provide a checkout form for the shopper to complete the purchase and provide the necessary contact, shipping and payment information.
 
@@ -458,41 +436,6 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 * A button is clearly available for the shopper to complete the order.
 
 * Stripe webhook handler is created in the backend to pass the order information in the case the browser crashes once the checkout completion.
-
-### Profile Page
-![Scotties profile page image](assets/readme/scottiest-profile.png)
-
-* Provide a form for the registered shopper to update their default information.
-
-* An order history section is present with all registered shopper's past orders information.
-
-
-
-### Reviews Page
-![Scotties  reviews page image](assets/readme/scotties-reviews.png)
-
-* Display the reviews the registered shopper has provided and the review's information.
-
-* Provide a link back to the product.
-
-* Links to edit and delete the reviews are present for each review.
-
-
-### Reviews Admin
-
-#### Add Review
-![Scotties add review page image](assets/readme/scotties-review-add.png)
-
-* Display the product being reviewed.
-
-* Provide a form for the registered shopper to be able to add review to the product.
-
-#### Edit Review
-![Scotties edit review page image](assets/readme/scotties-review-edit.png)
-
-* Provide a prefilled form for the registered shopper to be able to update their existing reviews.
-
-
 
 ### Accounts Pages
 
@@ -569,6 +512,9 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 * [Heroku](https://www.heroku.com)   
     * Heroku was used to deploy the website.
 
+* [cloudinary](https://www.cloudinary.com)   
+    * Cloudinary is used to hold images.    
+
 * [photoshop](https://www.adobe.com)   
     * Photoshop was used to design the homepage image
 
@@ -606,6 +552,22 @@ There were a few errors when i ran i ran the deployed project through the Nu Htm
 | W3 CSS| ![ W3 CSS Validator image](static/img/csstest.jpeg) 
 
 No Errors here 
+
+During development i would add this code to settings if debug was set to false, this then will show errors in the terminal. 
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'WARNING',
+    },
+}
 
 ## Deployment
  
@@ -690,8 +652,6 @@ Page | Desktop | Mobile |
 | About Us | ![Desktop About Us Page image](static/img/aboutus.jpeg) | ![Mobile Products Page image ](static/img/aboutus-mobile.jpeg) |
 | Products | ![Desktop Product Page image](static/img/products.jpeg) | ![Mobile Product Details Page image ](static/img/products-mobile.jpeg) |
 | Shopping Bag | ![Desktop Shopping Bag Page image](static/img/shoppingbag.jpeg) | ![Mobile Shopping Bag Page image ](static/img/shoppingbag-mobile.jpeg) |
-| Checkout | ![Desktop Checkout Page image](assets/readme/desktop-checkout.png) | ![Mobile Checkout Page image ](assets/readme/mobile-checkout.png) |
-| Checkout Success | ![Desktop Checkout Success Page image](assets/readme/desktop-checkout-success.png) | ![Mobile Checkout Page image ](assets/readme/mobile-checkout-success.png) |
 | Search | ![Desktop Reviews Page image](static/img/search.jpeg) | ![Mobile Reviews Page image ](static/img/search-mobile.jpeg) |
 
 
