@@ -84,6 +84,8 @@ ROOT_URLCONF = 'scottys.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -192,9 +194,9 @@ STATICFILES_DIRS = [
 ]
 
 cloudinary.config(
-    cloud_name = "dp1msqpei",
-    api_key = "238445858734859",
-    api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
+    cloud_name=config('CLOUD_NAME'),
+    api_key=config('API_KEY'),
+    api_secret=config('API_SECRET')
 )
 
 # Stripe 
