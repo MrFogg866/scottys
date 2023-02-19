@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'development')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', 'scotties.herokuapp.com', '*']
 
@@ -192,10 +192,9 @@ STATICFILES_DIRS = [
 ]
 
 cloudinary.config(
-
-    CLOUD_NAME = config('CLOUD_NAME'),
-    API_KEY = config('API_KEY'),
-    API_SECRET = config('API_SECRET'),
+    cloud_name = "dp1msqpei",
+    api_key = "238445858734859",
+    api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
 )
 
 # Stripe 
