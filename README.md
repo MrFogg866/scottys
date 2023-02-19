@@ -32,7 +32,6 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
         2. [Typography](#typography)
 2. [Marketing](#marketing)
    1. [Search Engine Optimisation](#search-engine-optimisation)
-   2. [Business Model](#business-model)
 3. [Features](#features)
    1. [General](#general)
    2. [Home Page](#home-page)
@@ -222,12 +221,16 @@ According to the strategy table, not all features can be implemented in the firs
 
 * Additional payment options
 
+### User Stories
+
+GitHub projects was used as my project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress.
+
 
 ### Structure
 
-The website has been organized in a Hierarchical Tree Structure to ensure the site user navigates through the site effortlessly and intuitively. Here you can you can find the website map design.
+The website has been organized in a Hierarchical Tree Structure to ensure the site user navigates through the site effortlessly and intuitively. Here you can you can find the website map design, this was created using [powermapper](https://www.powermapper.com/)
 
-![Scotties website map](assets/readme/sitemap.png)
+![Scotties website map](static/img/sitemap2.jpeg)
 
 * Header, footer and navigation bar are consistent through all pages.
 
@@ -237,38 +240,35 @@ The website has been organized in a Hierarchical Tree Structure to ensure the si
 
 * A 404-error page is available.
 
+![404 error](static/img/404.jpeg)
+
 
 #### Database Model
 
-The database model has been designed using [drawsql](https://drawsql.app/). The type of database being used for the is relational database being managed using SQLite3 during development and deployed using [PostgreSQL](https://www.postgresql.org/).
+The database model has been designed using [drawsql](https://drawsql.app/). The type of database being used for the is relational database being managed using SQLite3 during development and managed using [PostgreSQL](https://www.postgresql.org/) within the deployed app help in [Heroku](https://www.heroku.com/) .
 
 ![Scotties Database Model](assets/readme/db-model.png)
 
 #### Color Scheme
 
-![Color scheme image](../../../static/img/colour-scheme.jpeg)
+![Color scheme image](static/img/colour-scheme.jpeg)
 
-The colors used in the website are a series of blue tones to represent the stunning ocean colors and this way captivate our shoppers.
+The colors used in the website are designed to match the company colours #2DOBD6 and #F8A10A as seen used on the foodtruck.
 
-We use orange (#) for the main text, main buttons, navbar links and other links, as well as in some dark backgrounds to create color contrast across the website.
+We use black (#181B1B) for the main text, main buttons, navbar links and other links, as well as in some dark backgrounds to create color contrast across the website.
 
-For secondary buttons, footer background, as well as for links transitions we use a Blue (#055772). As well as to highlight some of the text and titles.
+For secondary buttons,  we use a Alabaster (#F0EDE2). As well as to highlight some of the text and titles.
 
-Cerulean Crayola (#09ABD7) is sparingly used, mainly in transitions and to highlight some critical links.
+Slate Blue (#695ec8) is  used for the colour of the shredded paper egg basket on the home page 
 
-We used  white   (#    ) for the main background and in text located within the dark backgrounds.
+We used  white   (#fff) for thein mbackground and in text located within the dark backgrounds.
 
 
 #### Typography
 
-The font used across the whole site is Oswald. It was used in two different weights.
-
-After some research on popular ecommerce business fonts. We decided to go with Oswald mainly for its simplicity, which makes it easy to read but at the same time being attention-grabbing.
-
+The font used across the whole site is Lato. It was used in two different weights.
 
 [Back to top ⇧](#scotties)
-
-### Business Model
 
 
 #### Company description
@@ -503,17 +503,14 @@ See the live Facebook Business page [here](https://www.facebook.com/).
 
 Page | Purpose | Image |
 --- | --- | --- |
-Sign Up | Allow the shopper to sign up an account for the website. | ![Scotties  Sign Up Page](assets/readme/scotties-sign-up.png) |
-Sign In | Allow the registered shopper to sign in with their account. | ![Scotties Sign In Page](assets/readme/scotties-sign-in.png) |
-Sign Out | Allow the registered shopper to sign out from their account. | ![Scotties  Sign Out Page](assets/readme/scotties-sign-out.png) |
+Sign Up | Allow the shopper to sign up an account for the website. | ![Scotties  Sign Up Page](static/img/signup.jpeg) |
+Sign In | Allow the registered shopper to sign in with their account. | ![Scotties Sign In Page](static/img/signin.jpeg) |
+Sign Out | Allow the registered shopper to sign out from their account. | ![Scotties  Sign Out Page](static/img/logout.jpeg) |
 
 ### 404 Error Page
-![Sotties 404 error page image](assets/readme/scotties-404.png)
+![Sotties 404 error page image](static/img/404.jpeg)
 
 * Provided information to the shopper in case the address entered cannot be found.
-
-* A link to come back to the products is present.
-
 
 [Back to top ⇧](#scotties)
 
@@ -577,8 +574,7 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 * [Heroku](https://www.heroku.com)   
     * Heroku was used to deploy the website.
 
-* [Tiny PNG](https://tinypng.com)    
-    * Tiny PNG was used to reduce the file size of the images.
+
 
 * [Coolors](https://coolors.co)  
     * Coolors was used to create a color scheme for the website.
@@ -686,15 +682,14 @@ The project should now complete to run and can now be used for development. To r
 
 Page | Desktop | Mobile |
 --- | --- | --- |
-| Home | ![Desktop Home Page image](assets/readme/desktop-home.png) | ![Mobile Home Page image ](assets/readme/mobile-home.png) |
-| Products | ![Desktop Products Page image](assets/readme/desktop-products.png) | ![Mobile Products Page image ](assets/readme/mobile-products.png) |
-| Product Details | ![Desktop Product Details Page image](assets/readme/desktop-product-detail.png) | ![Mobile Product Details Page image ](assets/readme/mobile-product-detail.png) |
-| Shopping Bag | ![Desktop Shopping Bag Page image](assets/readme/desktop-shopping-bag.png) | ![Mobile Shopping Bag Page image ](assets/readme/mobile-shopping-bag.png) |
+| Home | ![Desktop Home Page image](static/img/home.jpeg) | ![Mobile Home Page image ](static/img/home-mobile.jpeg) |
+| About Us | ![Desktop About Us Page image](static/img/aboutus.jpeg) | ![Mobile Products Page image ](static/img/aboutus-mobile.jpeg) |
+| Products | ![Desktop Product Page image](static/img/products.jpeg) | ![Mobile Product Details Page image ](static/img/products-mobile.jpeg) |
+| Shopping Bag | ![Desktop Shopping Bag Page image](static/img/shoppingbag.jpeg) | ![Mobile Shopping Bag Page image ](static/img/shoppingbag-mobile.jpeg) |
 | Checkout | ![Desktop Checkout Page image](assets/readme/desktop-checkout.png) | ![Mobile Checkout Page image ](assets/readme/mobile-checkout.png) |
 | Checkout Success | ![Desktop Checkout Success Page image](assets/readme/desktop-checkout-success.png) | ![Mobile Checkout Page image ](assets/readme/mobile-checkout-success.png) |
-| Profile | ![Desktop Profile Page image](assets/readme/desktop-profile.png) | ![Mobile Profile Page image ](assets/readme/mobile-profile.png) |
-| Reviews | ![Desktop Reviews Page image](assets/readme/desktop-reviews.png) | ![Mobile Reviews Page image ](assets/readme/mobile-reviews.png) |
-| Favorites | ![Desktop Favorites Page image](assets/readme/desktop-favorites.png) | ![Mobile Favorites Page image ](assets/readme/mobile-favorites.png) |
+| Search | ![Desktop Reviews Page image](static/img/search.jpeg) | ![Mobile Reviews Page image ](static/img/search-mobile.jpeg) |
+
 
 [Back to top ⇧](#scotties)
 
@@ -709,12 +704,8 @@ Page | Desktop | Mobile |
 
 ### Media
 
-* 
+* All images are owned by Scotties Hot Scotch Eggs 
 
-
-* The categories images were taken from the following sources:
-
-   * 
 
 ### Code
 
