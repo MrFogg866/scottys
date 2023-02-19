@@ -182,7 +182,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
@@ -194,12 +193,10 @@ STATICFILES_DIRS = [
 
 cloudinary.config(
 
-    cloud_name = "dp1msqpei",
-    api_key = "238445858734859",
-    api_secret = "tpVwhIlIS8ZCJqfr1BAchmDUQGU"
+    CLOUD_NAME = config('CLOUD_NAME')
+    API_KEY = config('API_KEY')
+    API_SECRET = config('API_SECRET')
 )
-
-result = cloudinary.uploader.upload("scotties")
 
 # Stripe 
 
