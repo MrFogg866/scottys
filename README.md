@@ -1,14 +1,14 @@
 # Scotties
 
 
-![Scotties mockup images](assets/readme/mockup-image.png)
+![Scotties mockup images](static/img/ami.jpeg)
 
 
 Scotties Hot Scotch Eggs is food truck based in Cambridge with an ecommerce website allowing customers to preorder freshly cooked items for collection in a specified timeslot.
 
-The main purpose of the website is to provide site users with the option to preorder their items and make payment in advance prior to collection.
+The website main goal is to allow users to view the menu and order some food.
 
-Another goal the website wants to achieve is to create is to allow users to book the food truck for special events, sign up for newsletters and get updates on upcoming locations.
+Additionally the website wants to achieve allowing users to book the food truck for special events, sign up for newsletters and get updates on upcoming locations.
 
 
 Visit the deployed website [here](https://scotties.herokuapp.com/).
@@ -89,8 +89,6 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
 
 * Customers are offered the opportunity to register an account.
 
-* Customers are offered the opportunity to select a time slot for collection after their payment has been completed.
-
 * Easy shopping process to create a pleaseant experince for the customer.
 
 
@@ -101,8 +99,6 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
 * As a shopper, I want to easily find the products and their details.
 
 * As a shopper, I want to view products on a specific category.
-
-* As a shopper, I want to be able to sort the products depending on their price, rating or category.
 
 * As a shopper, I want to be able to search for products using specific keywords.
 
@@ -134,22 +130,8 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
 
 * As a registered shopper, I want to have a personalized profile page where I can keep my contact information updated and see my past orders.
 
-**Epic 4 - Product Reviews**
 
-* As a shopper, I want to be able to read product reviews left by other shoppers.
-
-* As a shopper, I want to be able to sort the reviews by date or rating.
-
-* As a registered shopper, I want to be able to leave product reviews and rate the products.
-
-**Epic 5 - Favorites**
-
-* As a registered shopper, I want to be able to keep a list of my favorite products to purchase again in the future.
-
-* As a registered shopper, I want to be able to easily add and remove favorite products.
-
-
-**Epic 6 - Product Admin**
+**Epic 4 - Product Admin**
 
 * As a site admin, I want to be able to add and update products.
 
@@ -168,7 +150,6 @@ Responsive design | 5 | 5
 Create, edit and delete products | 5 | 5
 Account registration | 5 | 5
 User profile | 5 | 5
-Wishlist | 4 | 4
 Save shipment information | 5 | 5
 Product quick view | 3 | 2
 Sort products by different criteria | 5 | 5
@@ -182,7 +163,6 @@ View current shopping cart | 5 | 5
 Edit quantities inside the shopping bag | 4 | 4
 Shopping cart quick view | 3 | 3
 Card payment | 5 | 5
-Additional payment options | 3 | 2
 Newsletter subscription | 5 | 5
 
 **Total** | **88** | **83**
@@ -230,6 +210,7 @@ According to the strategy table, not all features can be implemented in the firs
 
 * Write product reviews
 
+* Pickup timeslot
 
 **Third Phase**
 
@@ -241,7 +222,6 @@ According to the strategy table, not all features can be implemented in the firs
 
 * Additional payment options
 
-* Select collection timeslot
 
 ### Structure
 
