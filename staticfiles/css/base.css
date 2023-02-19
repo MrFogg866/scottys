@@ -345,17 +345,6 @@ input[name='q']::placeholder {
     .navbar-brand img {
         max-height: 40px;
     }
-
-    .navbar-brand {
-        position: absolute;
-        left: 90%;
-        transform: translateX(-90%);
-        top: 0;
-        -webkit-transform: translateX(-90%);
-        -moz-transform: translateX(-90%);
-        -ms-transform: translateX(-90%);
-        -o-transform: translateX(-90%);
-    }
 }
 
 /*--------------------------------------------------------------
@@ -392,9 +381,14 @@ input[name='q']::placeholder {
     .banner-text {
         font-size: 30px;
         text-align: center;
+        position: relative;
+        top: 160px;
+    }
+
+    .banner-text a {
+        margin-top: 5px;
     }
 }
-
 .banner-text .btn-primary {
     background-image: linear-gradient(to right, #3636f3, #be43f1);
     border: none !important;
