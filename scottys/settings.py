@@ -193,9 +193,9 @@ STATICFILES_DIRS = [
 
 cloudinary.config(
 
-    CLOUD_NAME = config('CLOUD_NAME')
-    API_KEY = config('API_KEY')
-    API_SECRET = config('API_SECRET')
+    CLOUD_NAME = config('CLOUD_NAME'),
+    API_KEY = config('API_KEY'),
+    API_SECRET = config('API_SECRET'),
 )
 
 # Stripe 
