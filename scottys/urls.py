@@ -32,6 +32,7 @@ urlpatterns = [
     path('book-form/', include('bookform.urls')),
     path('newsletter/', include('newsletter.urls')),
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
+    path('auth/', include('authorization.urls')),
    
 
     

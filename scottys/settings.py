@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'social_media',
     'newsletter',
     'scottys',
+    'authorization',
 
     # other
     'crispy_forms',
