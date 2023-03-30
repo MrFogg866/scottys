@@ -23,7 +23,7 @@ def validate_email(request):
     return res   
 
 
-@login_required
+
 def index(request):
     reviews = Review.objects.all()
     products = Product.objects.all()
