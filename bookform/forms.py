@@ -2,6 +2,7 @@ from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Row, Column
 from django.core.mail import send_mail
+from .models import Booking
 
 
 class BookingForm(forms.Form):
@@ -45,12 +46,26 @@ class BookingForm(forms.Form):
         people = self.cleaned_data['people']
         message = self.cleaned_data['message']
 
+        # Create a new booking request
+        booking_request = Booking(
+            name=name,
+            email=email,
+            phone=phone,
+            date=date,
+            time=time,
+            people=people,
+            message=message,
+        )
+        
+        # Save the booking request to the database
+        booking_request.save()
+
         # Create the email message
         subject = f'Booking Request from {name}'
         body = f'Name: {name}\nEmail: {email}\nPhone: {phone}\nDate: {date}\nTime: {time}\nNumber of People: {people}\nMessage: {message}'
         from_email = 'your-email@example.com'
         to_email = ['scotties243@gmail.com']
-        
+
 
         # Send the email
         send_mail(subject, body, from_email, to_email, fail_silently=False)
