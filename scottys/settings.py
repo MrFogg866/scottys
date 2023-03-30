@@ -59,8 +59,6 @@ INSTALLED_APPS = [
     'about',
     'bookform',
     'social_media',
-    'login',
-    'signup',
     'newsletter',
     'scottys',
 
