@@ -1,34 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.models import User
+from django.http import Http404
 from django.http import JsonResponse
 import re
 from .models import SubscribedUsers
-from django.core.mail import send_mail
-from django.conf import settings
+from .forms import ReviewForm, NewsletterSubscriptionForm
+from .models import Product, Review
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
-# Create your views here.
-
-def index(request):
-    """ A view to return the index page """
-    return render(request, 'home/index.html')
-
-def index(request):
-    if request.method == 'POST':
-        post_data = request.POST.copy()
-        email = post_data.get("email", None)
-        name = post_data.get("name", None)
-        subscribedUsers = SubscribedUsers()
-        subscribedUsers.email = email
-        subscribedUsers.name = name
-        subscribedUsers.save()
-        # send a confirmation mail
-        subject = 'NewsLetter Subscription'
-        message = 'Hello ' + name + ', Thanks for subscribing us. You will get notification of latest articles posted on our website. Please do not reply on this email.'
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = [email, ]
-        send_mail(subject, message, email_from, recipient_list)
-        res = JsonResponse({'msg': 'Thanks. Subscribed Successfully!'})
-        return res
-    return render(request, 'home/index.html')
 
 def validate_email(request): 
     email = request.POST.get("email", None)   
@@ -41,3 +21,102 @@ def validate_email(request):
     else:
         res = JsonResponse({'msg': ''})
     return res   
+
+
+@login_required
+def index(request):
+    reviews = Review.objects.all()
+    products = Product.objects.all()
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, user=request.user)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            
+            # Get the selected product, if any
+            product_id = request.POST.get('product')
+            if product_id:
+                product = Product.objects.get(id=product_id)
+                review.product = product
+            
+            review.save()
+            form.save_m2m()  # Save many-to-many relationships
+            form = ReviewForm(user=request.user)
+    else:
+        form = ReviewForm(user=request.user)
+    context = {'reviews': reviews, 'form': form, 'products': products}
+    return render(request, 'home/index.html', context)
+
+
+@login_required
+def create_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, user=request.user)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+
+            # Get the selected product, if any
+            product_id = request.POST.get('product')
+            if product_id:
+                product = Product.objects.get(id=product_id)
+                review.product = product
+            
+            review.save()
+            form.save_m2m()
+            
+            return redirect('home')
+    else:
+        form = ReviewForm(user=request.user)
+
+    reviews = Review.objects.all()
+    return render(request, 'home/index.html', {'reviews': reviews, 'form': form})
+
+
+@login_required
+def edit_review(request, review_id):
+    review = Review.objects.get(id=review_id)
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review, user=request.user)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+
+            # Get the selected product, if any
+            product_id = request.POST.get('product')
+            if product_id:
+                product = Product.objects.get(id=product_id)
+                review.product = product
+
+            review.save()
+            form.save_m2m()
+            
+            return redirect('home')
+    else:
+        form = ReviewForm(instance=review, user=request.user)
+
+    context = {'form': form}
+    return render(request, 'home/index.html', context)
+
+
+@login_required
+def delete_review(request, review_id):
+    review_obj = get_object_or_404(Review, id=review_id)
+    if review_obj.user != request.user:
+        raise Http404
+    review_obj.delete()
+    return redirect('home')
+
+
+@login_required
+def subscribe(request):
+    if request.method == 'POST':
+        form = NewsletterSubscriptionForm(request.POST)
+        if form.is_valid():
+            subscriber = form.save(commit=False)
+            subscriber.save()
+            messages.success(request, 'Thank you for subscribing!')
+    else:
+        form = NewsletterSubscriptionForm()
+    return render(request, 'home/subscribe.html', {'form': form})
