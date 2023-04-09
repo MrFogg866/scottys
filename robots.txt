@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /logout/
+Disallow: /reset_password/
+Disallow: /static/
+Disallow: /templates/
