@@ -351,7 +351,7 @@ input[name='q']::placeholder {
 # Home Section
 --------------------------------------------------------------*/
 .home-header {
-    background-image:  url(../img/hero1.jpeg);
+    background-image:  url("../img/hero1.fbf430b74fe2.jpeg");
     background-position: center;
     background-size: cover;
     border-radius: 10px;
