@@ -15,7 +15,8 @@ urlpatterns = [
     path('', include('social_media.urls')),
     path('book-form/', include('bookform.urls')),
     path('auth/', include('authorization.urls')),
-    path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type='text/plain')),
+    path('robots.txt', TemplateView.as_view(template_name="robots.txt",
+    content_type='text/plain')),
 ]
 
 if settings.DEBUG:

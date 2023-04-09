@@ -109,7 +109,7 @@ def delete_review(request, review_id):
     return redirect('home')
 
 
-@login_required
+
 def subscribe(request):
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
