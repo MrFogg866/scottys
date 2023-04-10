@@ -4,11 +4,11 @@
 ![Scotties mockup images](static/img/ami.jpeg)
 
 
-Scotties Hot Scotch Eggs is food truck based in Cambridge with an ecommerce website allowing customers to preorder freshly cooked items for collection in a specified timeslot.
+Scotties Hot Scotch Eggs is food truck based in Cambridge with an ecommerce website allowing customers to order freshly cooked items, subscribe to the newsletter, review the products and make a booking enquiry for events.
 
 The website main goal is to allow users to view the menu and order some food.
 
-Additionally the website wants to achieve allowing users to book the food truck for special events, sign up for newsletters and get updates on upcoming locations.
+Additionally the website wants to achieve allowing users to book the food truck for special events, sign up for newsletters, make reviews and also find the social media links to get the vans location updates.
 
 
 Visit the deployed website [here](https://scotties.herokuapp.com/).
@@ -31,16 +31,16 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
         1. [Color Scheme](#color-scheme)
         2. [Typography](#typography)
 2. [Marketing](#marketing)
-   1. [Search Engine Optimisation](#search-engine-optimisation)
+   1. [Business Model](#business-model)
 3. [Features](#features)
-   1. [General](#general)
-   2. [Home Page](#home-page)
+   1. [header](#Header)
+   2. [home page](#home-page)
    3. [Products Page](#products-page)
    4. [Product Details Page](#product-details-page)
    5. [Products Admin](#products-admin)
    6. [Shopping Bag Page](#shopping-bag-page)
    7. [Checkout Page](#checkout-page)
-   8. [Checkout Success Page](#checkout-success-page)
+   8. [Booking Page](#Booking-page)
    9. [Profile Page](#profile-page)
    10. [Accounts Pages](#accounts-pages)
    11. [404 Error Page](#404-error-page)
@@ -53,7 +53,10 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
     6. [Cloud Storage](#cloud-storage)
     7. [Tools and Programs](#tools-and-programs)
 5. [Testing](#testing)
-    1. [Go to TESTING.md](https://github.com/………)
+    1. [html](#html)
+    2. [css](#css)
+    3. [python](#python)
+    4. [js](#js)
 6. [Deployment](#deployment)
     1. [How To Use This Project](#how-to-use-this-project)  
     2. [Deployment to Heroku](#deployment-to-heroku)   
@@ -153,7 +156,7 @@ Newsletter subscription | 5 | 5
 
 **Total** | **60** | **59**
 
-
+### Scope
 
 **First Phase**
 
@@ -208,7 +211,28 @@ Newsletter subscription | 5 | 5
 
 GitHub projects was used as my project management tool to track user stories. Using this helped to focus on specific tasks and track the project progress.
 
-|USER| ![User stories open cases](static/img/open.jpeg) | ![User stories closed cases](static/img/closed.jpeg) |
+**Sprint 1**
+![User stories start](static/img/us-start.png) 
+
+**Sprint 2**
+![User stories progress 1](static/img/sp1.png) 
+
+**Sprint 3**
+![User stories progress 2](static/img/sp2.png) 
+
+**Sprint 4**
+![User stories progress 3](static/img/sp3.png) 
+
+**Sprint 5**
+![User stories progress 4](static/img/sp4.png) 
+
+**Sprint 6**
+![User stories progress 5](static/img/sp5.png) 
+
+**Sprint 7**
+![User stories progress 5](static/img/sp6.png) 
+
+
 
 ### Structure
 
@@ -230,6 +254,23 @@ The website has been organized in a Hierarchical Tree Structure to ensure the si
 #### Database 
 
 The type of database being used for the is relational database being managed using SQLite3 during development and managed using [PostgreSQL](https://www.postgresql.org/) within the deployed app help in [Heroku](https://www.heroku.com/) .
+
+### Skeleton
+
+
+#### Wireframes
+
+[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
+
+Page | Desktop Version | Mobile Version
+--- | --- | ---
+Home | ![Desktop home wireframe image](static/img/wire-home.png) | 
+Products | ![Desktop products wireframe image](static/img/wire-product.png) | 
+Shopping Bag | ![Desktop shopping bag wireframe image](static/img/wire-bag.png) | 
+Checkout | ![Desktop checkout wireframe image](static/img/wire-checkout.png) |
+Profile | ![Desktop profile wireframe image](static/img/wire-profile.png) | 
+
+### Surface
 
 
 #### Color Scheme
@@ -253,8 +294,10 @@ The font used across the whole site is Lato. It was used in two different weight
 
 [Back to top ⇧](#scotties)
 
+### Marketing
 
-#### Company description
+
+#### Business Model
 
 Scotties Hot Scotch Eggs  is a B2C company that offer our customers freshly cooked hot food from a mobile food truck in the Cambridgeshire area. We serve the best hot scotch eggs around, with various flavours of offer and a menu that changes seasonally.
 
@@ -303,6 +346,7 @@ See the live Facebook Business page [here](https://www.facebook.com/Scotties-Hot
 
 See the Instragram page here [here](https://instagram.com/scotties_hotscotch_eggs?igshid=YmMyMTA2M2Y=).
 ![Scotties Instagram](static/img/ig.jpeg)
+
 ## Features
 
 
@@ -437,6 +481,23 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 
 * Stripe webhook handler is created in the backend to pass the order information in the case the browser crashes once the checkout completion.
 
+### Booking Page
+
+* here the user can enter information to request a booking
+
+![booking page](static/img/booking.png)
+
+* this then gets sent to the gmail account of the website owner, who is then able to reply by email to confirm the event booking.
+
+![booking request](static/img/booking-request.png)
+
+
+### Profile Page
+
+* here the user can update there profile after creating an account
+
+![profile page](static/img/profile.png)
+
 ### Accounts Pages
 
 Page | Purpose | Image |
@@ -545,13 +606,32 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 
 ## Testing
 
-| NU HTML| ![ HTML Validator image](static/img/testhtml1.jpeg) | ![HTML Validator image ](static/img/testhtml2.jpeg) |
+### HTML
+
+* [ HTML Validator image](static/img/testhtml1.jpeg) | ![HTML Validator image ](static/img/testhtml2.jpeg) |
 
 There were a few errors when i ran i ran the deployed project through the Nu Html Checker, and as you can see i removed these.
 
-| W3 CSS| ![ W3 CSS Validator image](static/img/csstest.jpeg) 
+### CSS
+
+* [ W3 CSS Validator image](static/img/csstest.jpeg) 
 
 No Errors here 
+
+
+### PYTHON
+
+* The pep8 debugger is currently out of action so i used (https://pep8ci.herokuapp.com/) to debug instead
+
+* [Python image](static/img/py-a.png) 
+
+* After all bugs have been cleared
+
+* [Python image](static/img/py-b.png)
+
+
+
+
 
 During development i would add this code to settings if debug was set to false, this then will show errors in the terminal. 
 
