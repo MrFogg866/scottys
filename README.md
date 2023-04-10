@@ -44,6 +44,7 @@ Visit the deployed website [here](https://scotties.herokuapp.com/).
    9. [Profile Page](#profile-page)
    10. [Accounts Pages](#accounts-pages)
    11. [404 Error Page](#404-error-page)
+   12. [Product Reviews](#reviews)
 4. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -262,13 +263,13 @@ The type of database being used for the is relational database being managed usi
 
 [Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
 
-Page | Desktop Version | Mobile Version
---- | --- | ---
-Home | ![Desktop home wireframe image](static/img/wire-home.png) | 
-Products | ![Desktop products wireframe image](static/img/wire-product.png) | 
-Shopping Bag | ![Desktop shopping bag wireframe image](static/img/wire-bag.png) | 
-Checkout | ![Desktop checkout wireframe image](static/img/wire-checkout.png) |
-Profile | ![Desktop profile wireframe image](static/img/wire-profile.png) | 
+Page |
+--- | 
+Home | ![home wireframe image](static/img/wire-home.png) | 
+Products | ![products wireframe image](static/img/wire-product.png) | 
+Shopping Bag | ![shopping bag wireframe image](static/img/wire-bag.png) | 
+Checkout | ![checkout wireframe image](static/img/wire-checkout.png) |
+Profile | ![profile wireframe image](static/img/wire-profile.png) | 
 
 ### Surface
 
@@ -471,8 +472,6 @@ See the Instragram page here [here](https://instagram.com/scotties_hotscotch_egg
 
 * Provide a link back to the shopping bag in the case the shopper would like to adjust the products in the shopping bag.
 
-* A box appears to pick a time slot 15 minutes from purchase in 15 minute intervals
-
 * A message is displayed, informing the shopper the amount to be charged on the provided card.
 
 * Descriptive error messages are displayed in case there is any issue with the payment information provided.
@@ -510,6 +509,20 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 ![Sotties 404 error page image](static/img/404.jpeg)
 
 * Provided information to the shopper in case the address entered cannot be found.
+
+### Reviews
+
+* Here is the form to make reviews, that is available once signed.
+
+![Sotties Review](static/img/review.png)
+
+* The review will show on the homepage & next to the product.
+
+![Sotties Review prod](static/img/review-prod.png)
+
+* Admin can edit these in the admin panal
+
+![Sotties Reviews Admin](static/img/review-admin.png)
 
 [Back to top ⇧](#scotties)
 
@@ -608,13 +621,13 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![Scot
 
 ### HTML
 
-* [ HTML Validator image](static/img/testhtml1.jpeg) | ![HTML Validator image ](static/img/testhtml2.jpeg) |
+* [HTML Validator image](static/img/testhtml1.jpeg) | ![HTML Validator image ](static/img/testhtml2.jpeg) |
 
 There were a few errors when i ran i ran the deployed project through the Nu Html Checker, and as you can see i removed these.
 
 ### CSS
 
-* [ W3 CSS Validator image](static/img/csstest.jpeg) 
+* ![W3 CSS Validator image](static/img/csstest.jpeg) 
 
 No Errors here 
 
@@ -623,11 +636,11 @@ No Errors here
 
 * The pep8 debugger is currently out of action so i used (https://pep8ci.herokuapp.com/) to debug instead
 
-* [Python image](static/img/py-a.png) 
+* ![Python image](static/img/py-a.jpeg) |
 
 * After all bugs have been cleared
 
-* [Python image](static/img/py-b.png)
+* ![Python image](static/img/py-b.png) |
 
 
 
